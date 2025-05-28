@@ -1,23 +1,63 @@
 [data-bs-theme=light] body {
-    font-family: 'Inter', sans-serif !important;
-    font-size: 13px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px !important;
     background-color: #343434;
 }
-.container {
-    max-width: 980px !important;
+.container {max-width: 1200px !important;}
+
+.wrapper {padding: 1.2rem 0.5rem 0.3rem !important;}
+
+.text-justify, .text-justify > p {text-align: justify !important;}
+
+.banner-image .subtitle {
+    color: var(--bs-light) !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
 }
-.wrapper {
-	padding: 1.2rem 0.5rem 0.3rem !important;
+.banner-image .title {
+    color: var(--bs-light) !important;
+    font-size: 42px !important;
+    font-weight: bold !important;
+    font-style: italic !important;
 }
+.banner-image::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    background: var(--bs-primary);
+}
+.sambutan-home {font-size: 16px !important;}
+.sambutan-image img {
+    width: 100% !important;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+.card-layanan img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+.btn-hubungi {background-color: #0AC733 !important;}
+.site-footer, .frame-layanan {background-color: #c1c1c1 !important;}
+.widget-footer .widget {
+    padding: 10px;
+    min-height: 250px;
+    border-radius: 5px;
+    background-color: #f5f5f5 !important;
+}
+
 #main-menu .dropdown-menu,
 .bg-header {
     background: transparent !important;
 }
-.navbar-brand img {
-    max-height: 130px !important;
-}
+.navbar-brand img {max-height: 130px !important;}
 #primary-menu a {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 .widget-area .table>:not(caption)>*>*, 
 .widget-area .widget_calendar .wp-calendar-table>:not(caption)>*>*,
@@ -25,18 +65,12 @@
 .widget-area table:not(.table)>:not(caption)>*>* {
     padding: 0.25rem 0.25rem;
 }
-.widget-area h3.widget-title {
-    background: var(--bs-primary);
-    color: var(--bs-white);
-    padding: 0.5rem;
-    font-size: .96rem !important;
-    position: relative;
-}
-.widget-area .widget > *:not(.widget-title):not(#searchform):not(.customize-partial-edit-shortcut) {
-    padding: 0.35rem;
-    border: 1px solid var(--bs-dark-bg-subtle);
-    background-color: var(--bs-white);
-    position: relative;
+.widget h3.widget-title {
+    padding-left: 0.7rem;
+    margin-bottom: 15px;
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    border-left: 6px solid var(--bs-primary);
 }
 .widget_search #searchsubmit,
 .widget_search #s {
@@ -44,21 +78,9 @@
     font-size: .85rem;
 }
 .widget-area .widget {
-    margin-bottom: 1rem;    
-    border: 1px solid var(--bs-dark-bg-subtle);
+    margin-bottom: 1rem;
     padding: 0.35rem;
     position: relative;
-}
-.widget-area .widget:before {
-    content: '';
-    background-color: var(--bs-primary);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 0;
-    opacity: 0.1;
 }
 .widget ul,
 .entry-content ul {
@@ -142,7 +164,7 @@
 .search-results .site-main .entry-summary p {
     margin-bottom: 3px;
 }
-.search-results .site-main .entry-header .entry-meta,
+.search-results .site-main .entry-footer,
 .widget ul li .sub-menu,
 .justg-breadcrumbs {
     display: none !important;
@@ -168,6 +190,7 @@ h3 {
     font-size: 19px !important;
 }
 h4 {
+
     font-size: 17px !important;
 }
 h5 {
@@ -189,9 +212,6 @@ a:hover {
     #primary-menu > li > a {
         transition: all .5s ease;
         position: relative;
-        color: #ffffff;
-        background-color: var(--bs-primary);
-        border: 1px solid transparent;
         margin-left: 0.35rem;
         margin-bottom: 0.35rem;
         margin-top: 0.35rem;
@@ -199,12 +219,11 @@ a:hover {
         padding-bottom: 0.35rem !important;
         padding-left: 1.2rem;
         padding-right: 1.2rem;
-        border-color: #ffffff;
     }    
     #primary-menu > li.current_page_item > a,
     #primary-menu > li.current-menu-item > a,
     #primary-menu > li > a:hover {
-        color: var(--bs-warning);
+        color: var(--bs-primary);
     }
     .pr-md-0 {
         padding-right: 0 !important;
@@ -215,4 +234,7 @@ a:hover {
     .widget-area {
         max-width: 23% !important;
     }
+}
+a{
+    text-decoration: none!important;
 }

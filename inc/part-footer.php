@@ -1,5 +1,28 @@
-<footer class="site-footer container text-center px-2 px-md-0" id="colophon">
-    <div class="site-info shadow border-light border border-top-0 bg-theme bg-primary text-light px-3 py-2 py-md-4">
+<footer class="site-footer" id="colophon">
+    <div class="footer-widget container py-5">
+        <div class="row m-0 velocity-widget">
+            <?php
+            if (is_active_sidebar('footer-widget-1')) {
+                echo '<div class="col-md-4 widget widget-footer">';
+                dynamic_sidebar('footer-widget-1');
+                echo '</div>';
+            }
+            if (is_active_sidebar('footer-widget-2')) {
+                echo '<div class="col-md-4 widget widget-footer">';
+                dynamic_sidebar('footer-widget-2');
+                echo '</div>';
+            }
+            if (is_active_sidebar('footer-widget-3')) {
+                echo '<div class="col-md-4 widget widget-footer">';
+                dynamic_sidebar('footer-widget-3');
+                echo '</div>';
+            }
+            ?>
+        </div>
+    </div>
+    <!-- .footer-widget -->
+
+    <div class="site-info text-center bg-dark text-light p-2">
         <small>
             Copyright © <?php echo date("Y"); ?> <?php echo get_bloginfo('name'); ?>. All Rights Reserved.
         </small>
