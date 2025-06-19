@@ -3,6 +3,8 @@
     font-size: 14px !important;
     background-color: #343434;
 }
+html, body {overflow-x: hidden !important;}
+
 .container {max-width: 1200px !important;}
 
 .wrapper {padding: 1.2rem 0.5rem 0.3rem !important;}
