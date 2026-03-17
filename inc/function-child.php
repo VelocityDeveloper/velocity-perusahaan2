@@ -377,7 +377,7 @@ if (!class_exists('Velocitychild_Repeater_Control') && class_exists('WP_Customiz
 							$image_id    = absint($field_value);
 							$image_url   = '';
 							if ($image_id > 0) {
-								$image_url = wp_get_attachment_image_url($image_id, 'thumbnail');
+								$image_url = wp_get_attachment_image_url($image_id, 'medium_large');
 							} elseif (filter_var($image_value, FILTER_VALIDATE_URL)) {
 								$image_url = $image_value;
 							}

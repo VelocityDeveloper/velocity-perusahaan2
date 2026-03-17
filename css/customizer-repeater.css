@@ -106,10 +106,7 @@
 
 .velocity-repeater-control .velocity-repeater-image-preview {
 	width: 100%;
-	max-width: 220px;
-	min-height: 90px;
-	border: 1px dashed #c3c4c7;
-	background: #f6f7f7;
+	border: 0;
 	border-radius: 2px;
 	display: flex;
 	align-items: center;
@@ -123,8 +120,9 @@
 
 .velocity-repeater-control .velocity-repeater-image-preview img {
 	width: 100%;
-	height: auto;
+	height: 100%;
 	display: block;
+	object-fit: contain;
 }
 
 .velocity-repeater-control .velocity-repeater-image-actions {

@@ -280,12 +280,15 @@
 			var attachment = frame.state().get('selection').first().toJSON();
 			var imageId = attachment.id || '';
 			var imageUrl = attachment.url || '';
+			var preferredSizes = ['medium_large', 'large', 'medium', 'thumbnail'];
+			var sizeIndex = 0;
 
 			if (attachment.sizes) {
-				if (attachment.sizes.thumbnail && attachment.sizes.thumbnail.url) {
-					imageUrl = attachment.sizes.thumbnail.url;
-				} else if (attachment.sizes.medium && attachment.sizes.medium.url) {
-					imageUrl = attachment.sizes.medium.url;
+				for (sizeIndex = 0; sizeIndex < preferredSizes.length; sizeIndex += 1) {
+					if (attachment.sizes[preferredSizes[sizeIndex]] && attachment.sizes[preferredSizes[sizeIndex]].url) {
+						imageUrl = attachment.sizes[preferredSizes[sizeIndex]].url;
+						break;
+					}
 				}
 			}
 
