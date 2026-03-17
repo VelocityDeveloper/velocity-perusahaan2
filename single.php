@@ -40,7 +40,6 @@ $container  = velocitytheme_option('justg_container_type', 'container');
                                     <div class="ms-2 d-inline-block" style="color:#787878;">
                                         <small><?php echo the_author_meta('user_nicename', get_the_author_ID());?></small><br/>
                                         <small><?php echo get_the_date();?></small>
-                                        <small><span class="view-post ms-2"><?php echo get_post_meta(get_the_ID(), 'hit', true);?> views</span></small>
                                     </div>
                                 </div>
                             </div><!-- .entry-meta -->

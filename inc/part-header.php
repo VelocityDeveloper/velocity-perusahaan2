@@ -1,23 +1,23 @@
 <div class=" bg-theme">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6">
-                <div class="text-start text-md-end py-3">
+        <div class="row align-items-center py-1">
+            <div class="col-12 col-sm-6 py-1">
+                <div class="text-start text-sm-end">
                     <?php
                     $notel = velocitytheme_option('notel', '');
                     if ($notel) {
-                        echo '<span class="rounded-circle bg-light text-color-theme p-2 me-2"><span class="dashicons dashicons-phone"></span></span>';
+                        echo '<span class="velocity-header-contact-icon rounded-circle bg-light text-color-theme me-2">' . velocitychild_get_bootstrap_icon_html('telephone-fill') . '</span>';
                         echo '<a href="tel:'.$notel.'" class="text-decoration-none text-light">'.$notel.'</a>';
                     }
                     ?>  
                 </div>
             </div>
-            <div class="col-12 col-md-6">
-                <div class="text-start py-3">
+            <div class="col-12 col-sm-6 py-1">
+                <div class="text-start">
                     <?php
                     $email = velocitytheme_option('email', '');
                     if ($email) {
-                        echo '<span class="rounded-circle bg-light text-color-theme p-2 me-2"><span class="dashicons dashicons-email-alt"></span></span>';
+                        echo '<span class="velocity-header-contact-icon rounded-circle bg-light text-color-theme me-2">' . velocitychild_get_bootstrap_icon_html('envelope-fill') . '</span>';
                         echo '<a href="mailto:'.$email.'" class="text-decoration-none text-light">'.$email.'</a>';
                     }
                     ?>
@@ -83,7 +83,7 @@
 
                 <div class="menu-header d-md-none position-relative text-end" data-bs-theme="dark">
                     <button class="navbar-toggler bg-theme rounded-1 p-2 text-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNavOffcanvas" aria-controls="navbarNavOffcanvas" aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'justg'); ?>">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <?php echo velocitychild_get_bootstrap_icon_html('list'); ?>
                     </button>
                 </div>
 

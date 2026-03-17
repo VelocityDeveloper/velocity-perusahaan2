@@ -1,6 +1,6 @@
 <footer class="site-footer" id="colophon">
-    <div class="footer-widget container py-5">
-        <div class="row m-0 velocity-widget">
+    <div class="footer-widget container pt-5">
+        <div class="row mx-0 my-2 velocity-widget">
             <?php
             if (is_active_sidebar('footer-widget-1')) {
                 echo '<div class="col-md-4 widget widget-footer">';
@@ -22,7 +22,7 @@
     </div>
     <!-- .footer-widget -->
 
-    <div class="site-info text-center bg-dark text-light p-2">
+    <div class="site-info text-center bg-dark text-light py-3">
         <small>
             Copyright © <?php echo date("Y"); ?> <?php echo get_bloginfo('name'); ?>. All Rights Reserved.
         </small>
